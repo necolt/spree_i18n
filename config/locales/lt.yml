@@ -116,7 +116,7 @@ lt:
       taxonomy: 
         name: Name
       user: 
-        email: Email
+        email: El. paštas
       variant: 
         cost_price: "Cost Price"
         depth: Depth
@@ -315,8 +315,8 @@ lt:
   configured: Configured
   confirm: Patvirtinimas
   confirm_delete: "Confirm Deletion"
-  confirm_password: "Password Confirmation"
-  continue: Continue
+  confirm_password: "Slaptažodžio pakartojimas"
+  continue: Tęsti
   continue_shopping: "Tęsti apsipirkimą"
   copy_all_mails_to: Copy All Mails To
   cost_price: "Cost Price"
@@ -326,8 +326,8 @@ lt:
   country_based: "Country Based"
   coupon: Coupon
   coupon_code: Nuolaidos kodas
-  create: Create
-  create_a_new_account: "Create a new account"
+  create: Sukurti
+  create_a_new_account: "Sukurti naują sąskaitą"
   create_product_group_from_products: Create a new product group from these products
   create_user_account: Create User Account
   created_successfully: "Created Successfully"
@@ -376,8 +376,8 @@ lt:
   editing_tracker: Editing Tracker
   editing_user: "Editing User"
   editing_zone: "Editing Zone"
-  email: Email
-  email_address: "Email Address"
+  email: El. paštas
+  email_address: "El. pašto adresas"
   email_server_settings_description: "Set email server settings."
   empty: "Tuščias"
   empty_cart: "Tuščias krepšelis"
@@ -407,7 +407,7 @@ lt:
   flat_rate_per_item: "Flat Rate (per item)"
   flat_rate_per_order: "Flat Rate (per order)"
   flexible_rate: "Flexible Rate"
-  forgot_password: "Forgot Password?"
+  forgot_password: "Pamiršote slaptažodį?"
   free_shipping: Free Shipping
   front_end: Front End
   full_name: "Full Name"
@@ -425,8 +425,8 @@ lt:
   google_analytics_id: "Analytics ID"
   google_analytics_new: "New Google Analytics Account"
   google_analytics_setting_description: "Manage Google Analytics ID"
-  guest_checkout: Guest Checkout
-  guest_user_account: Checkout as a Guest
+  guest_checkout: Apmokėjimas neprisijungus
+  guest_user_account: Apmokėti neprisijungus
   has_no_shipped_units: has no shipped units
   height: Height
   hello_user: "Hello User"
@@ -479,13 +479,13 @@ lt:
   live: "Live"
   loading: Loading
   locale_changed: "Locale Changed"
-  log_in: "Log In"
+  log_in: "Prisijungti"
   logged_in_as: "Logged in as"
-  logged_in_succesfully: "Logged in successfully"
-  logged_out: "You have been logged out."
+  logged_in_succesfully: "Prisijungėte sėkmingai"
+  logged_out: "Atsijungėte"
   login: Prisijungti
-  login_as_existing: "Log In as Existing Customer"
-  login_failed: "Login authentication failed."
+  login_as_existing: "Prisijungti"
+  login_failed: "Prisijungti nepavyko"
   login_name: Login
   logout: Atsijungti
   look_for_similar_items: Panašios prekės
@@ -512,7 +512,7 @@ lt:
   new_adjustment: "New Adjustment"
   new_billing_integration: New Billing Integration
   new_category: "New category"
-  new_customer: "New Customer"
+  new_customer: "Naujas klientas"
   new_image: "New Image"
   new_mail_method: New Mail Method
   new_option_type: "New Option Type"
@@ -610,7 +610,7 @@ lt:
   page_only_viewable_when_logged_out: You attempted to visit a page which can only be viewed when you are logged out
   paid: Paid
   parent_category: "Parent Category"
-  password: Password
+  password: Slaptažodis
   password_reset_instructions: "Password Reset Instructions"
   password_reset_instructions_are_mailed: "Instructions to reset your password have been emailed to you. Please check your email."
   password_reset_token_not_found: "We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process."
@@ -818,7 +818,7 @@ lt:
   register: Register as a New User
   register_or_guest: Checkout as Guest or Register
   registration: Registration
-  remember_me: "Remember me"
+  remember_me: "Prisiminti mane"
   remove: Remove
   reports: Reports
   required_for_solo_and_maestro: Required for Solo and Maestro cards.

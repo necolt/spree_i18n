@@ -486,7 +486,7 @@ lt:
   login: Prisijungti
   login_as_existing: "Prisijungti"
   login_failed: "Prisijungti nepavyko"
-  login_name: Login
+  login_name: Prisijungimo vardas
   logout: Atsijungti
   look_for_similar_items: Panašios prekės
   maestro_or_solo_cards: Maestro/Solo cards

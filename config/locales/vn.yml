@@ -25,10 +25,10 @@ vn:
         address2: "Địa chỉ (tiếp)"
         city: Thành phố
         country: "Quốc gia"
-        first_name: "Tên"
         first_name_begins_with: "Tên bắt đầu với"
-        last_name: "Họ"
+        firstname: "First Name"
         last_name_begins_with: "Họ bắt đầu với"
+        lastname: "Last Name"
         phone: Điện thoại
         state: "Bang"
         zipcode: "Mã bưu điện"
@@ -68,6 +68,8 @@ vn:
         quantity: Số lượng
       order: 
         checkout_complete: "Hoàn tất thủ tục mua hàng"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "Địa chỉ IP"
         item_total: "Tổng số lượng"
         number: Số
@@ -92,6 +94,13 @@ vn:
       product_scope: 
         arguments: "Tham số"
         description: "Chú thích"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Tên
         presentation: Trình bày
@@ -232,7 +241,7 @@ vn:
   allow_backorders: "Cho phép đặt hàng trước"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Cho phép sử dụng SSL dưới môi trường phát triển và kiểm tra
   allow_ssl_to_be_used_when_in_production_mode: Cho phép sử dụng SSL dưới môi trường sản xuất
-  allowed_ssl_in_production_mode: "SSL sẽ {{not}} được dùng trong sản xuất"
+  allowed_ssl_in_production_mode: "SSL sẽ %{not} được dùng trong sản xuất"
   already_registered: Đã đăng kí?
   alt_text: Chú thích khác
   alternative_phone: Điện thoại khác
@@ -269,7 +278,7 @@ vn:
   back_end: Back End
   back_to_store: "Quay lại cửa hàng"
   backordered: Đã đặt hàng trước
-  backordering_is_allowed: "Đã đặt hàng trước {{not}} được cho phép"
+  backordering_is_allowed: "Đã đặt hàng trước %{not} được cho phép"
   balance_due: "Tiền cần thanh toán"
   best_selling_products: "Sản phẩm bán chạy nhất"
   best_selling_taxons: "Đơn vị phân loại hàng bán chạy nhất"
@@ -321,7 +330,7 @@ vn:
   copy_all_mails_to: Sao chép tất cả thư vào
   cost_price: "Giá"
   count: Số lượng
-  count_of_reduced_by: "số lượng của '{{name}}' giảm đi {{count}}"
+  count_of_reduced_by: "số lượng của '%{name}' giảm đi %{count}"
   country: Quốc gia
   country_based: "Dựa trên quốc gia"
   coupon: Coupon
@@ -349,6 +358,7 @@ vn:
   debit: Nợ
   default: Default
   delete: Xóa
+  delivery: Delivery
   depth: Sâu
   description: Miêu tả
   destroy: Hủy diệt
@@ -357,6 +367,7 @@ vn:
   discount_amount: "Discount Amount"
   display: Trưng bày
   edit: Sửa đổi
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Sửa đổi các loại hình tích hợp thanh toán
   editing_category: "Sửa đổi loại mặt hàng"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ vn:
   enable_login_via_login_password: "Sử dụng email và mật khẩu chuẩn"
   enable_login_via_openid: "Dùng OpenID"
   enable_mail_delivery: Cho phép vận chuyển thư
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Nhập chính xác những gì ghi trên thẻ
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Môi trường"
   error: lỗi
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Sự kiện
   existing_customer: "Khách hàng hiện hữu"
   expiration: "Mãn hạn"
   expiration_month: "Hết hạn tháng"
   expiration_year: "Hết hạn năm"
+  expiry: Expiry
   extension: Gói mở rộng
   extensions: Gói mở rộng
   filename: Tên tệp tin
@@ -409,9 +429,11 @@ vn:
   flexible_rate: "Lãi suất dao động"
   forgot_password: "Quên mật khẩu"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Họ và tên"
   gateway: Gateway
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Sửa đổi Gateway"
   gateway_error: "Lỗi Gateway"
   gateway_setting_description: "Chọn một gateway thanh toán và Sửa đổi cấu hình nó."
@@ -498,6 +520,7 @@ vn:
   mark_shipped: "Chứng hàng đã chuyển"
   master_price: "Giá chủ"
   max_items: Số hàng tối đa
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta miểu tả"
   meta_keywords: "Meta danh sách từ khóa"
   metadata: "Metadata"
@@ -546,7 +569,6 @@ vn:
   no_products_found: "Không tìm thấy sản phẩm"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "Không có phương thức vận chuyển hiện hữu, xin thay đổi địa chỉ và thử lại."
   no_user_found: "Không tìm thấy người dùng có địa chỉ email đấy"
   none: Rỗng
   none_available: "Không có hàng nào"
@@ -564,8 +586,9 @@ vn:
     variant_not_deleted: "Không thể xóa biến thể"
   on_hand: "Có hàng"
   operation: Hoạt động
-  option_Values: "Giá trị tùy chọn"
+  option_type: "Option Type"
   option_types: "Kiểu tùy chọn"
+  option_value: "Option Value"
   option_values: "Giá trị tùy chọn"
   options: Tùy chọn
   or: hoặc
@@ -576,6 +599,11 @@ vn:
   order_date: "Ngày đặt hàng"
   order_details: "Chi tiết đơn hàng"
   order_email_resent: "Đơn hàng đã được gửi email lại"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: Số đơn hàng không có trùng với hệ thống
   order_number: Đơn hàng
   order_operation_authorize: Ủy quyền
@@ -592,10 +620,10 @@ vn:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: Tóm tắt đơn đặt hàng
-  order_sure_want_to: "Bạn có chắc bạn muốn {{event}} đơn hàng này?"
+  order_sure_want_to: "Bạn có chắc bạn muốn %{event} đơn hàng này?"
   order_total: "Tổng giá sau thuế"
   order_total_message: "Tổng số tiền sẽ được rút từ thẻ của bạn là"
   order_updated: "Đơn hàng được cập nhật"
@@ -618,6 +646,7 @@ vn:
   path: Đường dẫn
   pay: thanh toán
   payment: Thanh toán
+  payment_actions: "Actions"
   payment_gateway: "Gateway Thanh toán"
   payment_information: "Thông tin thanh toán"
   payment_method: Phương thức thanh toán
@@ -627,8 +656,14 @@ vn:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Thanh toán đã được cập nhật
   payments: Thanh toán
   pending_payments: Thanh toán chưa giải quyết
@@ -642,7 +677,7 @@ vn:
   previous: Trước
   price: Giá
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (bao gồm cả VAT)"
+  price_with_vat_included: "%{price} (bao gồm cả VAT)"
   problem_authorizing_card: "Có sự cố ủy quyền thẻ tín dụng"
   problem_capturing_card: "Có sự cố thu thập thẻ tín dụng"
   problems_processing_order: "Chúng tôi gặp sự cố xử lý thẻ của bạn"
@@ -657,7 +692,7 @@ vn:
   product_properties: "Đặc tính sản phẩm"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ vn:
         name: "Với Giá trị Đặc tính"
         sentence: với đặc tính <em>%s</em> và giá trị <em>%s</em>
   products: Sản phẩm
-  products_with_zero_inventory_display: "Sản phẩm không có hàng tồn sẽ {{not}} được hiển thị"
+  products_with_zero_inventory_display: "Sản phẩm không có hàng tồn sẽ %{not} được hiển thị"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ vn:
   provider: "Nhà cung cấp"
   provider_settings_warning: "Nếu thay đổi nhà cung cấp, bạn phải lưu trước khi sửa đổi cấu hình nhà cung cấp"
   qty: Số lượng
+  quantity_returned: Quantity Returned
   quantity_shipped: Tổng hàng đã chuyển
   range: "Mặt hàng"
   rate: Lãi suất
@@ -844,17 +881,16 @@ vn:
   rma_number: Số RMA
   rma_value: Giá trị RMA
   roles: Vai trò
+  rules: Rules
   sales_tax: "Thuế"
   sales_total: "Tổng giá trị"
-  sales_total_for_all_orders: "Tổng giá trị cho tất cả đơn hàng"
-  sales_totals: "Tổng giá trị"
-  sales_totals_description: "Tổng giá trị cho tất cả đơn hàng"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Lưu và tiếp tục
   save_preferences: Lưu cấu hình
   scope: Phạm vi
   scopes: Phạm vi
   search: Tìm kiếm
-  search_results: "Kết quả tìm kiếm cho '{{keywords}}'"
+  search_results: "Kết quả tìm kiếm cho '%{keywords}'"
   searching: Searching
   secure_connection_type: Kiệu kết nối bảo mật
   secure_creditcard: Thẻ tín dụng bảo mật cao
@@ -873,6 +909,9 @@ vn:
   ship_address: "Địa chỉ giao hàng"
   shipment: Vận chuyển
   shipment_details: Thông tin chuyển phát
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Kiện chuyển phát #"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ vn:
   shipping_methods: "Phương thức vận chuyển"
   shipping_methods_description: "Quản lý phương thức vận chuyển"
   shipping_total: "Tổng tiền vận chuyển"
-  shop_by_taxonomy: "Mua theo {{taxonomy}}"
+  shop_by_taxonomy: "Mua theo %{taxonomy}"
   shopping_cart: "Sọt mua sắm"
   show: Xem
   show_active: "Liệt kê đơn còn hiệu lực"
@@ -905,7 +944,7 @@ vn:
   show_only_complete_orders: "Chỉ hiện đơn hàng đã hoàn tất"
   show_out_of_stock_products: "Hiện sảm phẩm hết hàng"
   show_price_inc_vat: "Hiện giá bao gồm cả VAT"
-  showing_first_n: "Hiện thị {{n}} đầu tiên"
+  showing_first_n: "Hiện thị %{n} đầu tiên"
   sign_up: "Đăng ký"
   site_name: "Tên trang"
   site_url: "Địa chỉ URL"
@@ -925,6 +964,7 @@ vn:
   spree: 
     date: Ngày
     time: Giờ
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL sẽ không được dùng trong môi trường kiểm tra nếu cần thiết."
   ssl_will_be_used_in_production_mode: "SSL sẽ được dùng trong môi trường sản xuất"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL sẽ không được dùng trong môi trường phát triển nếu cần thiết"
@@ -942,6 +982,9 @@ vn:
   street_address_2: "Địa chỉ (tiếp)"
   subtotal: Tổng giá trước thuế
   subtract: Trừ đi
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: Hệ thống
   tax: Thuế
   tax_categories: "Loại thuế"
@@ -964,11 +1007,13 @@ vn:
   test: "Kiểm tra"
   test_mode: Chế độ kiểm tra
   thank_you_for_your_order: "Cảm ơn đã mua hàng. Xin hãy in ra một bản của trang này để tiện cho việc chứng thực nếu cần."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "tiếng Việt (VN)"
   this_month: "Tháng này"
   this_year: "Năm này"
   thumbnail: "Hình nhỏ"
   to_add_variants_you_must_first_define: "Để thêm biến thể, bạn phải định nghĩa trước"
+  to_state: "To State"
   top_grossing_products: "Sản phẩm lãi nhiều nhất"
   total: Giá trị
   tracking: Theo dõi
@@ -1023,6 +1068,7 @@ vn:
   width: Rộng
   year: "Năm"
   you_have_been_logged_out: "Bạn vừa đăng xuất."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Sọt hàng rỗng"
   zip: Mã bưu điện
   zone: Vùng

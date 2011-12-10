@@ -25,10 +25,10 @@ pl:
         address2: "Address (contd.)"
         city: City
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Phone
         state: "State"
         zipcode: "Zip Code"
@@ -68,6 +68,8 @@ pl:
         quantity: Quantity
       order: 
         checkout_complete: "Checkout Complete"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Address"
         item_total: "Item Total"
         number: Number
@@ -92,6 +94,13 @@ pl:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Presentation
@@ -232,7 +241,7 @@ pl:
   allow_backorders: "Allow Backorders"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
   allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
-  allowed_ssl_in_production_mode: "SSL will {{not}} be used in production"
+  allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: Already Registered?
   alt_text: Alternative Text
   alternative_phone: Alternative Phone
@@ -269,7 +278,7 @@ pl:
   back_end: Back End
   back_to_store: "Powrót do sklepu"
   backordered: Backordered
-  backordering_is_allowed: "Backordering {{not}} allowed"
+  backordering_is_allowed: "Backordering %{not} allowed"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ pl:
   copy_all_mails_to: Copy All Mails To
   cost_price: "Cost Price"
   count: Count
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: Kraj
   country_based: "Country Based"
   coupon: Coupon
@@ -349,6 +358,7 @@ pl:
   debit: Debit
   default: Default
   delete: Skasuj
+  delivery: Delivery
   depth: Depth
   description: Opis
   destroy: Usuń
@@ -357,6 +367,7 @@ pl:
   discount_amount: "Discount Amount"
   display: Wyświetl
   edit: Edytuj
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Edycja kategorii"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ pl:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: błąd
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Event
   existing_customer: "Existing Customer"
   expiration: "Expiration"
   expiration_month: "Miesiąc wygaśnięcia"
   expiration_year: "Rok wygaśnięcia"
+  expiry: Expiry
   extension: Rozszerzenie
   extensions: Rozszerzenia
   filename: "Nazwa pliku"
@@ -409,9 +429,11 @@ pl:
   flexible_rate: "Flexible Rate"
   forgot_password: "Forgot Password"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Full Name"
   gateway: Brama
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Gateway configuration"
   gateway_error: "Błąd bramki"
   gateway_setting_description: "Wybierz metodę płatności i skonfiguruj jej ustawienia."
@@ -498,6 +520,7 @@ pl:
   mark_shipped: "Mark Shipped"
   master_price: "Cena główna"
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta Description"
   meta_keywords: "Meta Keywords"
   metadata: "Metadata"
@@ -546,7 +569,6 @@ pl:
   no_products_found: "No products found"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: Żaden
   none_available: Niedostępne
@@ -564,8 +586,9 @@ pl:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "On Hand"
   operation: Operacja
-  option_Values: "Wartości Opcji"
+  option_type: "Option Type"
   option_types: "Typy Opcji"
+  option_value: "Option Value"
   option_values: "Option Values"
   options: Opcje
   or: lub
@@ -576,6 +599,11 @@ pl:
   order_date: "Data zamówienia"
   order_details: "Szczegóły zamówienia"
   order_email_resent: "Email z zamowieniem ponownie przesłany"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: That order number is not valid on this site.
   order_number: "Nr zamówienia"
   order_operation_authorize: Autoryzuj
@@ -592,10 +620,10 @@ pl:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: Order Summary
-  order_sure_want_to: "Are you sure you want to {{event}} this order?"
+  order_sure_want_to: "Are you sure you want to %{event} this order?"
   order_total: "Zamówienie łącznie"
   order_total_message: "The total amount charged to your card will be"
   order_updated: "Zamówienie uaktualnione"
@@ -618,6 +646,7 @@ pl:
   path: Path
   pay: zapłać
   payment: Płatność
+  payment_actions: "Actions"
   payment_gateway: "Metoda Płatności"
   payment_information: "Payment Information"
   payment_method: Payment Method
@@ -627,8 +656,14 @@ pl:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Payments
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ pl:
   previous: Poprzednie
   price: Cena
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (inc. VAT)"
+  price_with_vat_included: "%{price} (inc. VAT)"
   problem_authorizing_card: "Wystąpił problem przy autoryzacji karty"
   problem_capturing_card: "Wystąpił problem z przechwyceniem karty"
   problems_processing_order: "Wystąpiły problemy podczas przetwarzania zamówienia"
@@ -657,7 +692,7 @@ pl:
   product_properties: "Właściwości produktu"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ pl:
         name: "With property value"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: Produkty
-  products_with_zero_inventory_display: "Products with a zero inventory will {{not}} be displayed"
+  products_with_zero_inventory_display: "Products with a zero inventory will %{not} be displayed"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ pl:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: Ilość
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Rate
@@ -844,17 +881,16 @@ pl:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: Roles
+  rules: Rules
   sales_tax: "Sales Tax"
   sales_total: "Sales Total"
-  sales_total_for_all_orders: "Sales total for all orders"
-  sales_totals: "Sales Totals"
-  sales_totals_description: "Sales Total For All Orders"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Save and Continue
   save_preferences: Save Preferences
   scope: Scope
   scopes: Scopes
   search: Szukaj
-  search_results: "Search results for '{{keywords}}'"
+  search_results: "Search results for '%{keywords}'"
   searching: Searching
   secure_connection_type: Secure Connection Type
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ pl:
   ship_address: "Adres Dostawy"
   shipment: Shipment
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Shipment #"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ pl:
   shipping_methods: "Shipping Methods"
   shipping_methods_description: "Manage shipping methods"
   shipping_total: "Koszt dostawy"
-  shop_by_taxonomy: "Shop by {{taxonomy}}"
+  shop_by_taxonomy: "Shop by %{taxonomy}"
   shopping_cart: Koszyk
   show: Show
   show_active: "Show Active"
@@ -905,7 +944,7 @@ pl:
   show_only_complete_orders: "Only show complete orders"
   show_out_of_stock_products: "Show out-of-stock products"
   show_price_inc_vat: "Show price including VAT"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Załóż konto"
   site_name: "Site Name"
   site_url: "Site URL"
@@ -925,6 +964,7 @@ pl:
   spree: 
     date: Data
     time: Czas
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
@@ -942,6 +982,9 @@ pl:
   street_address_2: "Ulica (c.d)"
   subtotal: "Suma częściowa"
   subtract: Subtract
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: System
   tax: Podatek
   tax_categories: "Kategorie Podatkowe"
@@ -964,11 +1007,13 @@ pl:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: Polski (PL)
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Thumbnail"
   to_add_variants_you_must_first_define: "To add variants, you must first define"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: Łącznie
   tracking: Tracking
@@ -1023,6 +1068,7 @@ pl:
   width: Width
   year: "Year"
   you_have_been_logged_out: "You have been logged out."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Your cart is empty"
   zip: "Kod pocztowy"
   zone: Strefa

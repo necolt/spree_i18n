@@ -25,10 +25,10 @@ de-CH:
         address2: "Adresse (weiter)"
         city: Stadt
         country: "Land"
-        first_name: "Vorname"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Nachname"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Telefonnummer
         state: "State"
         zipcode: PLZ
@@ -68,6 +68,8 @@ de-CH:
         quantity: Menge
       order: 
         checkout_complete: "Bestellung abgeschlossen"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP-Adresse"
         item_total: "Artikel gesamt"
         number: Bestellnummer
@@ -92,6 +94,13 @@ de-CH:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Darstellung
@@ -232,7 +241,7 @@ de-CH:
   allow_backorders: "Lieferrückstand erlauben"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: "SSL in den Modi 'development' und 'test' erlauben"
   allow_ssl_to_be_used_when_in_production_mode: "SSL im Modus 'production' erlauben"
-  allowed_ssl_in_production_mode: "SSL will {{not}} be used in production"
+  allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: "Bereits registriert?"
   alt_text: Alternative Text
   alternative_phone: "Alternative Telefonnummer"
@@ -269,7 +278,7 @@ de-CH:
   back_end: Back End
   back_to_store: "Zurück zum Shop"
   backordered: Backordered
-  backordering_is_allowed: "Lieferrückstand ist {{not}} erlaubt"
+  backordering_is_allowed: "Lieferrückstand ist %{not} erlaubt"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ de-CH:
   copy_all_mails_to: "Kopien aller E-Mails an"
   cost_price: "Cost Price"
   count: Count
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: Land
   country_based: "Länderbasiert"
   coupon: Coupon
@@ -349,6 +358,7 @@ de-CH:
   debit: Debit
   default: Default
   delete: Löschen
+  delivery: Delivery
   depth: Tiefe
   description: Beschreibung
   destroy: Entfernen
@@ -357,6 +367,7 @@ de-CH:
   discount_amount: "Discount Amount"
   display: Anzeigen
   edit: Bearbeiten
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Kategorie bearbeiten"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ de-CH:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "OpenID verwenden"
   enable_mail_delivery: "Mailversand einschalten"
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Umgebung"
   error: Fehler
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Ereignis
   existing_customer: "Vorhandener Kunde"
   expiration: "Gültigkeitsdauer"
   expiration_month: "Gültig bis (Monat)"
   expiration_year: "Gültig bis (Jahr)"
+  expiry: Expiry
   extension: Erweiterung
   extensions: Erweiterungen
   filename: Dateiname
@@ -409,9 +429,11 @@ de-CH:
   flexible_rate: "Flexible Rate"
   forgot_password: "Passwort vergessen?"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Vollständiger Name"
   gateway: "Gateway"
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Gateway-Konfiguration"
   gateway_error: "Gateway-Fehler"
   gateway_setting_description: "Gateway-Einstellungen ändern"
@@ -498,6 +520,7 @@ de-CH:
   mark_shipped: "Als versandt kennzeichnen"
   master_price: Grundpreis
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta-Beschreibung"
   meta_keywords: "Meta-Schlüsselwörter"
   metadata: "Metadaten"
@@ -546,7 +569,6 @@ de-CH:
   no_products_found: "Keine Produkte gefunden"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "Kein Benutzer mit dieser E-Mailadresse gefunden"
   none: kein
   none_available: "keine verfügbar"
@@ -564,8 +586,9 @@ de-CH:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "Auf Lager"
   operation: Operation
-  option_Values: "Optionswerte"
+  option_type: "Option Type"
   option_types: Optionen
+  option_value: "Option Value"
   option_values: "Optionswalues"
   options: Optionen
   or: oder
@@ -576,6 +599,11 @@ de-CH:
   order_date: Bestelldatum
   order_details: "Details der Bestellung"
   order_email_resent: "Bestellbestätigung erneut versendet"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: "Diese Bestellnummer ist auf diesem System nicht gültig."
   order_number: "Bestellnummer"
   order_operation_authorize: ""
@@ -592,10 +620,10 @@ de-CH:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: "Bestellübersicht"
-  order_sure_want_to: "Sind Sie sicher, dass Sie diese Bestellung {{event}} möchten?"
+  order_sure_want_to: "Sind Sie sicher, dass Sie diese Bestellung %{event} möchten?"
   order_total: Gesamtsumme
   order_total_message: "Die Gesamtsumme, mit der Ihre Kreditkarte belastet wird"
   order_updated: "Bestellung aktualisiert"
@@ -618,6 +646,7 @@ de-CH:
   path: Pfad
   pay: zahlen
   payment: Zahlung
+  payment_actions: "Actions"
   payment_gateway: "Zahlungs-Gateway"
   payment_information: Zahlungsinformationen
   payment_method: Payment Method
@@ -627,8 +656,14 @@ de-CH:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Zahlungen
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ de-CH:
   previous: zurück
   price: Preis
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (inkl. MwSt.)"
+  price_with_vat_included: "%{price} (inkl. MwSt.)"
   problem_authorizing_card: "Es gab ein Problem ihre Kreditkarte zu identifizieren"
   problem_capturing_card: "Es gab ein Problem beim Belasten ihrer Kreditkarte"
   problems_processing_order: "Ihre Bestellung konnte nicht bearbeitet werden"
@@ -657,7 +692,7 @@ de-CH:
   product_properties: "Produkt-Eigenschaften"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ de-CH:
         name: "With property value"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: Produkte
-  products_with_zero_inventory_display: "Produkte mit einem Lagerbestand von Null werden {{not}} angezeigt"
+  products_with_zero_inventory_display: "Produkte mit einem Lagerbestand von Null werden %{not} angezeigt"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ de-CH:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: Anzahl
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Rate
@@ -844,17 +881,16 @@ de-CH:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: Rollen
+  rules: Rules
   sales_tax: "Sales Tax"
   sales_total: "Umsatz Gesamt"
-  sales_total_for_all_orders: "Umsätze für alle Bestellungen"
-  sales_totals: "Umsätze Gesamt"
-  sales_totals_description: ""
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: "Speichern und fortsetzen"
   save_preferences: "Einstellungen speichern"
   scope: Scope
   scopes: Scopes
   search: Suchen
-  search_results: "Search results for '{{keywords}}'"
+  search_results: "Search results for '%{keywords}'"
   searching: Searching
   secure_connection_type: Secure Connection Type
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ de-CH:
   ship_address: Lieferadresse
   shipment: Lieferung
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Versandnummer"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ de-CH:
   shipping_methods: "Versandarten"
   shipping_methods_description: "Versandarten verwalten"
   shipping_total: "Lieferkosten Gesamt"
-  shop_by_taxonomy: "{{taxonomy}} einkaufen"
+  shop_by_taxonomy: "%{taxonomy} einkaufen"
   shopping_cart: Warenkorb
   show: Zeigen
   show_active: "Show Active"
@@ -905,7 +944,7 @@ de-CH:
   show_only_complete_orders: "Nur komplette Bestellungen anzeigen"
   show_out_of_stock_products: "Ausverkaufte Produkte anzeigen"
   show_price_inc_vat: "Zeige Preis inkl. Steuer"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Anmelden"
   site_name: "Seitenname"
   site_url: "Seiten-URL"
@@ -925,6 +964,7 @@ de-CH:
   spree: 
     date: Datum
     time: Uhrzeit
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL wird im Development- und Test-Modus benutzt, falls nötig."
   ssl_will_be_used_in_production_mode: "SSL wird im Production-Modus benutzt"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL wird nicht im Development- und Test-Modus benutzt, falls nötig."
@@ -942,6 +982,9 @@ de-CH:
   street_address_2: "Strasse (Feld 2)"
   subtotal: Zwischensumme
   subtract: Subtrahieren
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: System
   tax: MwSt.
   tax_categories: "Steuerkategorien"
@@ -964,11 +1007,13 @@ de-CH:
   test: "Test"
   test_mode: "Test-Modus"
   thank_you_for_your_order: "Vielen Dank für ihre Bestellung"
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: Deutsch (Schweiz)
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Miniaturansicht"
   to_add_variants_you_must_first_define: "Um Varianten hinzuzufügen, müssen Sie sie erst definieren."
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: Gesamt
   tracking: Tracking
@@ -1023,6 +1068,7 @@ de-CH:
   width: Breite
   year: "Jahr"
   you_have_been_logged_out: "Sie haben sich ausgeloggt"
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Ihr Warenkorb ist leer"
   zip: PLZ
   zone: Zone

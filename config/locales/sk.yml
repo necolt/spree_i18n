@@ -25,10 +25,10 @@ sk:
         address2: "Adresa (pokr.)"
         city: Mesto
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Telefón
         state: "State"
         zipcode: "PSČ"
@@ -68,6 +68,8 @@ sk:
         quantity: Množstvo
       order: 
         checkout_complete: "Potvrdenie"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Adresa"
         item_total: "Položky celkom"
         number: Číslo
@@ -92,6 +94,13 @@ sk:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Názov
         presentation: Prezentácia
@@ -232,7 +241,7 @@ sk:
   allow_backorders: "Povoliť pohľadávky"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Povoliť používanie SSL vo vývojovom a testovacom móde
   allow_ssl_to_be_used_when_in_production_mode: Povoliť používanie SSL v produkčnom móde
-  allowed_ssl_in_production_mode: "používanie SSL v produkčnom móde: {{not}}"
+  allowed_ssl_in_production_mode: "používanie SSL v produkčnom móde: %{not}"
   already_registered: Už registrovaný?
   alt_text: Alternative Text
   alternative_phone: Iný telefónny kontakt
@@ -269,7 +278,7 @@ sk:
   back_end: Back End
   back_to_store: "Späť do obchodu"
   backordered: Backordered
-  backordering_is_allowed: "Pohľadávky {{not}} sú povolené"
+  backordering_is_allowed: "Pohľadávky %{not} sú povolené"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ sk:
   copy_all_mails_to: Kopíruj všetky emaily do
   cost_price: "Cost Price"
   count: Count
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: Krajina
   country_based: "Krajina"
   coupon: Coupon
@@ -349,6 +358,7 @@ sk:
   debit: Debit
   default: Default
   delete: Vymaž
+  delivery: Delivery
   depth: Hĺbka
   description: Popis
   destroy: Zruš
@@ -357,6 +367,7 @@ sk:
   discount_amount: "Discount Amount"
   display: Zobraz
   edit: Edit
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Úprava kategórie"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ sk:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: Prihlásenie sa cez OpenID
   enable_mail_delivery: Povolenie doručenie emailom
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Prosím zadajte presne podľa karty
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: chyba
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Udalosť
   existing_customer: "Registrovaný zákazník"
   expiration: "Expirácia"
   expiration_month: "Mesiac expirácie"
   expiration_year: "Rok expirácie"
+  expiry: Expiry
   extension: Rozšírenie
   extensions: Rozšírenia
   filename: Názov súboru
@@ -409,9 +429,11 @@ sk:
   flexible_rate: "Flexibilná sadzba"
   forgot_password: "Zabudnuté heslo"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Celé meno"
   gateway: "Brány platieb"
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Konfigurácia brány"
   gateway_error: "Chyba brány"
   gateway_setting_description: "Výber a nastavenie brán platieb"
@@ -498,6 +520,7 @@ sk:
   mark_shipped: "Znak bol doručený"
   master_price: "Hlavná cena"
   max_items: Maximálny počet položiek
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta-popis"
   meta_keywords: "Meta-kľúčové slová"
   metadata: "Metaúdaje"
@@ -546,7 +569,6 @@ sk:
   no_products_found: Nenašli sme žiadny produkt
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "Žiadny používateľ sa nenašiel s touto emailovou adresou"
   none: Žiadny
   none_available: "Žiadny nie je dispozícii"
@@ -564,8 +586,9 @@ sk:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "Na sklade"
   operation: Operácia
-  option_Values: "Hodnoty opcií"
+  option_type: "Option Type"
   option_types: "Typy opcií"
+  option_value: "Option Value"
   option_values: "Hodnoty opcií"
   options: Opcie
   or: alebo
@@ -576,6 +599,11 @@ sk:
   order_date: "Dátum objednávky"
   order_details: "Detaily objednávky"
   order_email_resent: "Email objednávky bol opäť poslaný"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: Číslo tejto objednávky nie je správny na tejto stránke.
   order_number: Objednávka
   order_operation_authorize: Autorizuj
@@ -592,10 +620,10 @@ sk:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: Sumár objednávky
-  order_sure_want_to: "Are you sure you want to {{event}} this order?"
+  order_sure_want_to: "Are you sure you want to %{event} this order?"
   order_total: "Objednávka celkom"
   order_total_message: "Úplné množstvo účtované na Vašu kartu bude"
   order_updated: "Objednávka zmenená"
@@ -618,6 +646,7 @@ sk:
   path: Cesta
   pay: platba
   payment: Platba
+  payment_actions: "Actions"
   payment_gateway: "Brána platby"
   payment_information: "Informácia o platení"
   payment_method: Payment Method
@@ -627,8 +656,14 @@ sk:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Platba
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ sk:
   previous: Predchádzajúci
   price: Cena
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (inc. VAT)"
+  price_with_vat_included: "%{price} (inc. VAT)"
   problem_authorizing_card: "Problém autorizácie kreditnou kartou"
   problem_capturing_card: "Problém zachytenia kreditnou kartou"
   problems_processing_order: "Mali sme problém so spracovaním Vašej objednávky"
@@ -657,7 +692,7 @@ sk:
   product_properties: "Vlastnosti produktu"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ sk:
         name: "With property value"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: Produkty
-  products_with_zero_inventory_display: "Produkty ktoré nie sú skladované {{not}} sú zobrazené."
+  products_with_zero_inventory_display: "Produkty ktoré nie sú skladované %{not} sú zobrazené."
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ sk:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: Množstvo
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Sadzba
@@ -844,17 +881,16 @@ sk:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: Roly
+  rules: Rules
   sales_tax: "Daň z predaja"
   sales_total: "Tržby spolu"
-  sales_total_for_all_orders: "Tržby spolu za všetky objednávky"
-  sales_totals: "Tržby celkom"
-  sales_totals_description: "Tržby celkom za všetky objednávky"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Save and Continue
   save_preferences: Ulož nastavenia
   scope: Scope
   scopes: Scopes
   search: Hľadaj
-  search_results: "Search results for '{{keywords}}'"
+  search_results: "Search results for '%{keywords}'"
   searching: Searching
   secure_connection_type: Bezpečná konekcia
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ sk:
   ship_address: "Adresa zásielky"
   shipment: Zásielka
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Číslo zásielky #"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ sk:
   shipping_methods: "Metódy doručenia"
   shipping_methods_description: "Riadenie metód doručenia"
   shipping_total: "Zásielka celkom"
-  shop_by_taxonomy: "{{taxonomy}}"
+  shop_by_taxonomy: "%{taxonomy}"
   shopping_cart: "Nákupný košík"
   show: Show
   show_active: "Show Active"
@@ -905,7 +944,7 @@ sk:
   show_only_complete_orders: "Zobraz iba úplné objednávky"
   show_out_of_stock_products: "Zobraz produkty s prázdnou zásobou"
   show_price_inc_vat: "Zobraz cenu s DPH"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Registrácia"
   site_name: "Názov stránky"
   site_url: "URL stránky"
@@ -925,6 +964,7 @@ sk:
   spree: 
     date: Dátum
     time: Čas
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL bude používaný vo vývojovom a testovacom móde v prípade potreby."
   ssl_will_be_used_in_production_mode: "SSL bude používaný v produkčnom móde"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL nebude používaný vo vývojovom a testovacom móde."
@@ -942,6 +982,9 @@ sk:
   street_address_2: "Ulica (pokr.)"
   subtotal: Medzisúčet
   subtract: Odrátaj
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: Systém
   tax: Daň
   tax_categories: "Kategórie daní"
@@ -964,11 +1007,13 @@ sk:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "Ďakujeme za Vašu objednávku.  Prosím vytlačte kópiu toto potvrdenie pre Vaše položky objednávky."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "Slovenčina"
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Miniatúra"
   to_add_variants_you_must_first_define: "K pridaniu variánt, najprv musíte určiť"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: Celkom
   tracking: Sledovanie
@@ -1023,6 +1068,7 @@ sk:
   width: Šírka
   year: "Rok"
   you_have_been_logged_out: "Odhlásili ste sa."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Váš košík je prázdny"
   zip: PSČ
   zone: Zóna

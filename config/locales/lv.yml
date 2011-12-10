@@ -25,10 +25,10 @@ lv:
         address2: "Adrese (papildus)"
         city: "Pilsēta"
         country: "Valsts"
-        first_name: "Vārds"
         first_name_begins_with: "Vārds sākas ar"
-        last_name: "Uzvārds"
+        firstname: "First Name"
         last_name_begins_with: "Uzvārds sākas ar"
+        lastname: "Last Name"
         phone: "Telefons"
         state: "Rajons"
         zipcode: "Pasta indekss"
@@ -68,6 +68,8 @@ lv:
         quantity: "Daudzums"
       order: 
         checkout_complete: "Izrakstīšanās pabeigta"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Adrese"
         item_total: "Kopējā vienība"
         number: "Skaitlis"
@@ -92,6 +94,13 @@ lv:
       product_scope: 
         arguments: "Argumenti"
         description: "Apraksts"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: "Nosaukums"
         presentation: "Prezentācija"
@@ -232,7 +241,7 @@ lv:
   allow_backorders: "Atļaut nokavētos sūtījumus"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
   allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
-  allowed_ssl_in_production_mode: "SSL {{not}}tiks izmantots ražošanā"
+  allowed_ssl_in_production_mode: "SSL %{not}tiks izmantots ražošanā"
   already_registered: "Esi jau reģistrējies?"
   alt_text: "Cits teksts"
   alternative_phone: "Cits telefons"
@@ -269,7 +278,7 @@ lv:
   back_end: Back End
   back_to_store: "Atgriezties veikalā"
   backordered: "Nokavētie pasūtījumi"
-  backordering_is_allowed: "Nokavētie pasūtījumi {{not}} atļauti"
+  backordering_is_allowed: "Nokavētie pasūtījumi %{not} atļauti"
   balance_due: "Atlikums"
   best_selling_products: "Vislabāk pārdotie produkti"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ lv:
   copy_all_mails_to: "Kopēt visas vēstules uz"
   cost_price: "Pašizmaksa"
   count: "Skaitīt"
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: "Valsts"
   country_based: "Valsts"
   coupon: Coupon
@@ -349,6 +358,7 @@ lv:
   debit: "Debits"
   default: Default
   delete: "Izdzēst"
+  delivery: Delivery
   depth: "Dziļums"
   description: Nosaukums
   destroy: "Izdzēst"
@@ -357,6 +367,7 @@ lv:
   discount_amount: "Discount Amount"
   display: "Rādīt"
   edit: "Rediģēt"
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Rediģēt kategoriju"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ lv:
   enable_login_via_login_password: "Izmanto standarta e-pastu/paroli"
   enable_login_via_openid: "Tā vietā izmantot atvērto ID"
   enable_mail_delivery: "Atļaut pasta sūtīšanu"
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: "Lūdzu ievadiet precīzi kā norādīts uz kartes"
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Vide"
   error: "Kļūda"
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: "Notikums"
   existing_customer: "Esošais klients"
   expiration: "Izbeigšanās"
   expiration_month: "Beigu mēnesis"
   expiration_year: "Beigu gads"
+  expiry: Expiry
   extension: "Paplašinājums"
   extensions: "Paplašinājumi"
   filename: "Faila nosaukums"
@@ -409,9 +429,11 @@ lv:
   flexible_rate: "Elastīga likme"
   forgot_password: "Parole aizmirsta"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Pilns vārds"
   gateway: Gateway
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Gateway konfigurācija"
   gateway_error: "Gateway kļūda"
   gateway_setting_description: "Izvēlieties maksāšanas gateway un konfigurējiet tā iestatījumus."
@@ -498,6 +520,7 @@ lv:
   mark_shipped: "Atzīmēt aizsūtītos"
   master_price: "Master Price"
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta apraksts"
   meta_keywords: "Meta atslēgas vārdi"
   metadata: "Metadata"
@@ -546,7 +569,6 @@ lv:
   no_products_found: "Nav atrasts nekāds produkts"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "Nekāda nosūtīšanas metode nav pieejam, lūdzū, izmainiet savu adresi un mēģiniet vēlreiz."
   no_user_found: "Neviens lietotājs netika atrasts ar šādu e-pasta adresi"
   none: "Nekas"
   none_available: "Nekas nav pieejams"
@@ -564,8 +586,9 @@ lv:
     variant_not_deleted: "Variants nav izdzēsts"
   on_hand: "Ir uz vietas"
   operation: Operation
-  option_Values: "Opciju vērtība"
+  option_type: "Option Type"
   option_types: "Opciju tips"
+  option_value: "Option Value"
   option_values: "Opciju vērtība"
   options: "Iespējas"
   or: "vai"
@@ -576,6 +599,11 @@ lv:
   order_date: "Pasūtījuma datums"
   order_details: "Pasūtījuma detaļas"
   order_email_resent: "Pasūtījuma e-pasts vēlreiz pārsūtīts"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: "Šis pasūtījuma numurs nav derīgs šajā saitā."
   order_number: "Pasūtījums"
   order_operation_authorize: "Autorizēt"
@@ -592,10 +620,10 @@ lv:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: "Pasūtījuma apkopojums"
-  order_sure_want_to: "Vai esiet pārliecināts, ka vēlaties {{event}} šo pasūtījumu?"
+  order_sure_want_to: "Vai esiet pārliecināts, ka vēlaties %{event} šo pasūtījumu?"
   order_total: "Kopējais pasūtījums"
   order_total_message: "Kopējais apjoms ņemts no jūsu kartes būs"
   order_updated: "Pasūtījums atjaunots"
@@ -618,6 +646,7 @@ lv:
   path: "Ceļš"
   pay: "maksā"
   payment: "Maksājums"
+  payment_actions: "Actions"
   payment_gateway: "Payment Gateway"
   payment_information: "Maksājumu informācija"
   payment_method: "Maksājuma metode"
@@ -627,8 +656,14 @@ lv:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: "Maksājums atjaunots"
   payments: "Maksājumi"
   pending_payments: "Nenokārtoti maksājumi"
@@ -642,7 +677,7 @@ lv:
   previous: "Iepriekšējais"
   price: "Cena"
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (ieskaitot PVN)"
+  price_with_vat_included: "%{price} (ieskaitot PVN)"
   problem_authorizing_card: "Problēma autorizēt kredīta karti"
   problem_capturing_card: "Problem capturing credit card"
   problems_processing_order: "Mums bija problēmas apstrādāt jūsu pasūtījumu"
@@ -657,7 +692,7 @@ lv:
   product_properties: "Produkta īpašības"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ lv:
         name: "Ar īpašības vērtību"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: "Produkti"
-  products_with_zero_inventory_display: "Produkti, kas nav noliktavā, {{not}} tiks rādīti"
+  products_with_zero_inventory_display: "Produkti, kas nav noliktavā, %{not} tiks rādīti"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ lv:
   provider: "Piegādātājs"
   provider_settings_warning: "Ja tu maini piegādātāja tipu, tev vajag vispirms saglabāt pirms veikt izmaiņas piegādātāja uzstādījumiem"
   qty: "Daudzums"
+  quantity_returned: Quantity Returned
   quantity_shipped: "Daudzums nosūtīts"
   range: "Diapazons"
   rate: "Tarifs"
@@ -844,17 +881,16 @@ lv:
   rma_number: "RMA numurs"
   rma_value: "RMA vērtība"
   roles: Roles
+  rules: Rules
   sales_tax: "Pārdošanas nodoklis"
   sales_total: "Kopējā realizācija"
-  sales_total_for_all_orders: "Kopējā realizācija visiem pasūtījumiem"
-  sales_totals: "Kopējā realizācija"
-  sales_totals_description: "Kopējā realizācija visiem pasūtījumiem"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: "Saglabāt un turpināt"
   save_preferences: "Saglabāt iestatījumus"
   scope: Scope
   scopes: Scopes
   search: "Meklēšana"
-  search_results: "Meklēšanas rezultāti '{{keywords}}'"
+  search_results: "Meklēšanas rezultāti '%{keywords}'"
   searching: Searching
   secure_connection_type: Secure Connection Type
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ lv:
   ship_address: "Nosūtīšanas adrese"
   shipment: "Sūtījums"
   shipment_details: "Sūtījuma detaļas"
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Sūtījums #"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ lv:
   shipping_methods: "Sūtīšanas metodes"
   shipping_methods_description: "Pārvaldīt sūtīšanas metodes"
   shipping_total: "Kopējais sūtīšanai"
-  shop_by_taxonomy: "Pirkt pēc {{taxonomy}}"
+  shop_by_taxonomy: "Pirkt pēc %{taxonomy}"
   shopping_cart: "Iepirkuma grozs"
   show: "Parādīt"
   show_active: "Parādīt aktīvos"
@@ -905,7 +944,7 @@ lv:
   show_only_complete_orders: "Parādīt tikai pabeigtos pasūtījumus"
   show_out_of_stock_products: "Parādīt izpārdotos produktus"
   show_price_inc_vat: "Parādīt cenu iekļaujot PVN"
-  showing_first_n: "Parādīt pirmos {{n}}"
+  showing_first_n: "Parādīt pirmos %{n}"
   sign_up: "Parakstīties"
   site_name: "Interneta adreses nosaukums"
   site_url: "Interneta adreses links"
@@ -925,6 +964,7 @@ lv:
   spree: 
     date: "Datums"
     time: "Laiks"
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL tiks izmantots attīstībā un testa modē, ja nepieciešams."
   ssl_will_be_used_in_production_mode: "SSL tiks izmantots produkcijas modē"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL tiks izmantots attīstībā un testa modē, ja nepieciešams."
@@ -942,6 +982,9 @@ lv:
   street_address_2: "Ielas adrese (turpinājums)"
   subtotal: "Starpsumma"
   subtract: "Atskaitīt"
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: "Sistēma"
   tax: "Nodokļi"
   tax_categories: "Nodokļu kategorijas"
@@ -964,11 +1007,13 @@ lv:
   test: "Tests"
   test_mode: "Testa Mode"
   thank_you_for_your_order: "Paldies par sadarbību. Lūdzu, izdrukājiet šo apstiprinājumu savai zināšanai."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "Angliski (US)"
   this_month: "Šis mēnesis"
   this_year: "Šis gads"
   thumbnail: "Thumbnail"
   to_add_variants_you_must_first_define: "Lai pievienotu variantu, vispirms definējiet"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: "Kopā"
   tracking: Tracking
@@ -1023,6 +1068,7 @@ lv:
   width: "Platums"
   year: "Gads"
   you_have_been_logged_out: "Jūs esat izgājis no sistēmas."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Jūsu iepirkuma grozs ir tukšs"
   zip: "Pasta kods"
   zone: "Zona"

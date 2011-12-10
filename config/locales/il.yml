@@ -25,10 +25,10 @@ il:
         address2: "Address (contd.)"
         city: עיר
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Phone
         state: "State"
         zipcode: "Zip Code"
@@ -68,6 +68,8 @@ il:
         quantity: Quantity
       order: 
         checkout_complete: "Checkout Complete"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Address"
         item_total: "Item Total"
         number: Number
@@ -92,6 +94,13 @@ il:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Presentation
@@ -232,7 +241,7 @@ il:
   allow_backorders: "Allow Backorders"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
   allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
-  allowed_ssl_in_production_mode: "SSL will {{not}} be used in production"
+  allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: Already Registered?
   alt_text: Alternative Text
   alternative_phone: Alternative Phone
@@ -269,7 +278,7 @@ il:
   back_end: Back End
   back_to_store: "Go Back To Store"
   backordered: Backordered
-  backordering_is_allowed: "Backordering {{not}} allowed"
+  backordering_is_allowed: "Backordering %{not} allowed"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ il:
   copy_all_mails_to: Copy All Mails To
   cost_price: "Cost Price"
   count: Count
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: ארץ
   country_based: "Country Based"
   coupon: Coupon
@@ -349,6 +358,7 @@ il:
   debit: Debit
   default: Default
   delete: Delete
+  delivery: Delivery
   depth: Depth
   description: Description
   destroy: Destroy
@@ -357,6 +367,7 @@ il:
   discount_amount: "Discount Amount"
   display: Display
   edit: Edit
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Editing Category"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ il:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: error
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Event
   existing_customer: "משתמש קיים"
   expiration: "תאריך תפוגה"
   expiration_month: "חודש תפוגה"
   expiration_year: "שנת תפוגה"
+  expiry: Expiry
   extension: Extension
   extensions: Extensions
   filename: Filename
@@ -409,9 +429,11 @@ il:
   flexible_rate: "Flexible Rate"
   forgot_password: "שכחתי סיסמה"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Full Name"
   gateway: Gateway
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Gateway configuration"
   gateway_error: "Gateway Error"
   gateway_setting_description: "Select a payment gateway and configure its settings."
@@ -498,6 +520,7 @@ il:
   mark_shipped: "Mark Shipped"
   master_price: "Master Price"
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta Description"
   meta_keywords: "Meta Keywords"
   metadata: "Metadata"
@@ -546,7 +569,6 @@ il:
   no_products_found: "No products found"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: None
   none_available: "None Available"
@@ -564,8 +586,9 @@ il:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "On Hand"
   operation: Operation
-  option_Values: "Option Values"
+  option_type: "Option Type"
   option_types: "Option Types"
+  option_value: "Option Value"
   option_values: "Option Values"
   options: Options
   or: or
@@ -576,6 +599,11 @@ il:
   order_date: "Order Date"
   order_details: "Order Details"
   order_email_resent: "Order Email Resent"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: That order number is not valid on this site.
   order_number: Order
   order_operation_authorize: Authorize
@@ -592,10 +620,10 @@ il:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: Order Summary
-  order_sure_want_to: "Are you sure you want to {{event}} this order?"
+  order_sure_want_to: "Are you sure you want to %{event} this order?"
   order_total: "סכום כולל"
   order_total_message: "The total amount charged to your card will be"
   order_updated: "Order Updated"
@@ -618,6 +646,7 @@ il:
   path: Path
   pay: pay
   payment: Payment
+  payment_actions: "Actions"
   payment_gateway: "Payment Gateway"
   payment_information: "פרטי התשלום"
   payment_method: Payment Method
@@ -627,8 +656,14 @@ il:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Payments
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ il:
   previous: Previous
   price: מחיר
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (inc. VAT)"
+  price_with_vat_included: "%{price} (inc. VAT)"
   problem_authorizing_card: "Problem authorizing credit card"
   problem_capturing_card: "Problem capturing credit card"
   problems_processing_order: "We had problems processing your order"
@@ -657,7 +692,7 @@ il:
   product_properties: "Product Properties"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ il:
         name: "With property value"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: Products
-  products_with_zero_inventory_display: "Products with a zero inventory will {{not}} be displayed"
+  products_with_zero_inventory_display: "Products with a zero inventory will %{not} be displayed"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ il:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: כמות
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Rate
@@ -844,17 +881,16 @@ il:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: Roles
+  rules: Rules
   sales_tax: "Sales Tax"
   sales_total: "Sales Total"
-  sales_total_for_all_orders: "Sales total for all orders"
-  sales_totals: "Sales Totals"
-  sales_totals_description: "Sales Total For All Orders"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Save and Continue
   save_preferences: Save Preferences
   scope: Scope
   scopes: Scopes
   search: Search
-  search_results: "Search results for '{{keywords}}'"
+  search_results: "Search results for '%{keywords}'"
   searching: Searching
   secure_connection_type: Secure Connection Type
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ il:
   ship_address: "כתובת למשלוח חבילה"
   shipment: Shipment
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Shipment #"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ il:
   shipping_methods: "Shipping Methods"
   shipping_methods_description: "Manage shipping methods"
   shipping_total: "Shipping Total"
-  shop_by_taxonomy: "הצג לפי {{taxonomy}}"
+  shop_by_taxonomy: "הצג לפי %{taxonomy}"
   shopping_cart: "עגלת קניות"
   show: Show
   show_active: "Show Active"
@@ -905,7 +944,7 @@ il:
   show_only_complete_orders: "Only show complete orders"
   show_out_of_stock_products: "Show out-of-stock products"
   show_price_inc_vat: "Show price including VAT"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Sign up"
   site_name: "Site Name"
   site_url: "Site URL"
@@ -925,6 +964,7 @@ il:
   spree: 
     date: Date
     time: Time
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
@@ -942,6 +982,9 @@ il:
   street_address_2: "רחוב ומספר - המשך"
   subtotal: "סיכום ביניים"
   subtract: Subtract
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: System
   tax: "מע\"מ"
   tax_categories: "Tax Categories"
@@ -964,11 +1007,13 @@ il:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "עִבְרִית (IL)"
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Thumbnail"
   to_add_variants_you_must_first_define: "To add variants, you must first define"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: "סה\"כ"
   tracking: Tracking
@@ -1023,6 +1068,7 @@ il:
   width: Width
   year: "Year"
   you_have_been_logged_out: "You have been logged out."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Your cart is empty"
   zip: מיקוד
   zone: Zone

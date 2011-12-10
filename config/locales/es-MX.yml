@@ -1,5 +1,5 @@
 ---
-es: 
+es-MX: 
   'no': "No"
   'yes': "Sí"
   5_biggest_spenders: Los 5 compradores principales
@@ -862,7 +862,7 @@ es:
   resend: "Volver a enviar"
   resend_confirmation_instructions: "Reenviar instrucciones de confirmación"
   resend_unlock_instructions: "Reenviar instrucciones de desbloqueo"
-  reset_password: "Reiniciar mi contraseña"
+  reset_password: "Reiniciar my contraseña"
   resource_controller: 
     member_object_not_found: "Miembro no encontrado."
     successfully_created: "Creado con éxito"
@@ -1008,7 +1008,7 @@ es:
   test_mode: Modo Prueba
   thank_you_for_your_order: "Gracias por su pedido"
   there_were_problems_with_the_following_fields: "Han habido problemas con los siguientes campos: "
-  this_file_language: "Español"
+  this_file_language: "Español (México)"
   this_month: "Éste mes"
   this_year: "Éste año"
   thumbnail: "Miniatura"

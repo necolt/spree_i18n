@@ -25,10 +25,10 @@ th:
         address2: "ที่อยู่ (เพิ่มเติม)"
         city: จังหวัด
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: โทรศัพท์
         state: "State"
         zipcode: รหัสไปรษณีย์
@@ -68,6 +68,8 @@ th:
         quantity: จำนวน
       order: 
         checkout_complete: รายการสั่งซื้อเสร็จสมบูรณ์
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Address"
         item_total: "จำนวนสินค้า"
         number: หมายเลข
@@ -92,6 +94,13 @@ th:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: ชื่อ
         presentation: ชื่อที่แสดง
@@ -232,7 +241,7 @@ th:
   allow_backorders: "อนุญาติการสั่งซื้อ เมื่อสินค้าหมด"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
   allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
-  allowed_ssl_in_production_mode: "SSL will {{not}} be used in production"
+  allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: Already Registered?
   alt_text: Alternative Text
   alternative_phone: เบอร์โทรอื่นๆ
@@ -269,7 +278,7 @@ th:
   back_end: Back End
   back_to_store: "กลับไปหน้าร้าน"
   backordered: Backordered
-  backordering_is_allowed: "({{not}} allowed) การซื้อเมื่อสินค้าหมด"
+  backordering_is_allowed: "(%{not} allowed) การซื้อเมื่อสินค้าหมด"
   balance_due: "Balance Due"
   best_selling_products: "Best Selling Products"
   best_selling_taxons: "Best Selling Taxons"
@@ -321,7 +330,7 @@ th:
   copy_all_mails_to: คัดลอกเมลทุกฉบับส่งไปที่
   cost_price: "Cost Price"
   count: Count
-  count_of_reduced_by: "count of '{{name}}' reduced by {{count}}"
+  count_of_reduced_by: "count of '%{name}' reduced by %{count}"
   country: ประเทศ
   country_based: ยืดประเทศเป็นหลัก
   coupon: Coupon
@@ -349,6 +358,7 @@ th:
   debit: Debit
   default: Default
   delete: ลบ
+  delivery: Delivery
   depth: ลึก
   description: รายละเอียด
   destroy: ทำลาย
@@ -357,6 +367,7 @@ th:
   discount_amount: "Discount Amount"
   display: แสดง
   edit: แก้ไข
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "แก้ไขหมวดหมู่"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ th:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: เปิดระบบส่งเมล
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: "กรุณาใส่ข้อมูลทุกอย่างที่แสดงบนบัตร"
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: ขัดข้อง
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Event
   existing_customer: "เป็นลูกค้าเดิม"
   expiration: "หมดอายุ"
   expiration_month: "Expiration Month"
   expiration_year: "Expiration Year"
+  expiry: Expiry
   extension: Extension
   extensions: Extensions
   filename: Filename
@@ -409,9 +429,11 @@ th:
   flexible_rate: "Flexible Rate"
   forgot_password: ลืมรหัสผ่าน
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Full Name"
   gateway: ช่องทางจ่ายเงิน
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: ข้อมูลช่องทางจ่ายเงิน
   gateway_error: "Gateway Error"
   gateway_setting_description: "เลือกช่องทางจ่ายเงิน และ ใส่รายละเอียด"
@@ -498,6 +520,7 @@ th:
   mark_shipped: "Mark Shipped"
   master_price: ราคาหลัก
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: รายละเอียด
   meta_keywords: คำสำคัญ
   metadata: ข้อมูลประกอบสินค้า
@@ -546,7 +569,6 @@ th:
   no_products_found: "No products found"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: ว่าง
   none_available: "None Available"
@@ -564,8 +586,9 @@ th:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: สินค้าในคลัง
   operation: Operation
-  option_Values: รายการตัวเลือก
+  option_type: "Option Type"
   option_types: รายการเพื่อเลือก
+  option_value: "Option Value"
   option_values: รายการตัวเลือก
   options: ตัวเลือก
   or: หรือ
@@ -576,6 +599,11 @@ th:
   order_date: "วันที่สั่งซื้อ"
   order_details: รายละเอียดการสั่งซื้อ
   order_email_resent: "Order Email Resent"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: That order number is not valid on this site.
   order_number: รหัสสั่งซื้อ
   order_operation_authorize: Authorize
@@ -592,10 +620,10 @@ th:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: Order Summary
-  order_sure_want_to: "Are you sure you want to {{event}} this order?"
+  order_sure_want_to: "Are you sure you want to %{event} this order?"
   order_total: ราคารวม
   order_total_message: "ยอดซื้อรวมจะเก็บจากบัตรเครดิตของคุณ"
   order_updated: "ปรับปรุงรายการสั่งซื้อ"
@@ -618,6 +646,7 @@ th:
   path: Path
   pay: pay
   payment: Payment
+  payment_actions: "Actions"
   payment_gateway: ช่องทางจ่ายเงิน
   payment_information: ข้อมูลการจ่ายเงิน
   payment_method: Payment Method
@@ -627,8 +656,14 @@ th:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: รายการจ่าย
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ th:
   previous: ก่อนหน้า
   price: ราคา
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (inc. VAT)"
+  price_with_vat_included: "%{price} (inc. VAT)"
   problem_authorizing_card: "ปัญหาในการยืนยันบัตรเครดิต"
   problem_capturing_card: "ปัญหาในการตรวจสอบบัตรเครดิต"
   problems_processing_order: "เรามีปัญหาในการดำเนินการสั่งซื้อ"
@@ -657,7 +692,7 @@ th:
   product_properties: สรรพคุณของสินค้า
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ th:
         name: "With property value"
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: สินค้า
-  products_with_zero_inventory_display: "({{not}} Display) แสดงสินค้าที่หมดคลังสินค้า"
+  products_with_zero_inventory_display: "(%{not} Display) แสดงสินค้าที่หมดคลังสินค้า"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ th:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: จำนวน
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: "อัตรา(เปอร์เซ็น)"
@@ -844,17 +881,16 @@ th:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: บทบาท
+  rules: Rules
   sales_tax: "Sales Tax"
   sales_total: "ยอดขายรวม"
-  sales_total_for_all_orders: "ยอดขายรวมจากทุกการสั่งซื้อ"
-  sales_totals: "ยอดขายรวม"
-  sales_totals_description: "ยอดขายรวมจากทุกการสั่งซื้อ"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Save and Continue
   save_preferences: Save Preferences
   scope: Scope
   scopes: Scopes
   search: ค้นหา
-  search_results: "Search results for '{{keywords}}'"
+  search_results: "Search results for '%{keywords}'"
   searching: Searching
   secure_connection_type: การเชื่อมต่อแบบปลอดภัย
   secure_creditcard: Secure Creditcard
@@ -873,6 +909,9 @@ th:
   ship_address: "ที่อยู่ในการจัดส่ง"
   shipment: การขนส่งทางเรือ
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "รหัสส่งของ"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ th:
   shipping_methods: "วิธีการจัดส่ง"
   shipping_methods_description: "จัดการ การจัดส่งสินค้า"
   shipping_total: "Shipping Total"
-  shop_by_taxonomy: "เลือกตาม {{taxonomy}}"
+  shop_by_taxonomy: "เลือกตาม %{taxonomy}"
   shopping_cart: สินค้าในตะกร้า
   show: Show
   show_active: "Show Active"
@@ -905,7 +944,7 @@ th:
   show_only_complete_orders: แสดงเฉพาะรายการที่เสร็จสมบูรณ์
   show_out_of_stock_products: แสดงสินค้าหมดคลัง
   show_price_inc_vat: "แสดงราคารวมภาษีแล้ว"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Sign up"
   site_name: ชื่อของเว็บ
   site_url: "URL ของเว็บ"
@@ -925,6 +964,7 @@ th:
   spree: 
     date: วัน
     time: เวลา
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "จะใช้ระบบ SSL ในการพัฒนา และ การทดสอบ (development and test mode) ถ้าจำเป็น"
   ssl_will_be_used_in_production_mode: "ระบบ SSL จะใช้ในการทำงานจริง (production mode)"
   ssl_will_not_be_used_in_development_and_test_modes: "ถ้าไม่จำเป็น จะไม่ใช้ระบบ SSL ในการพัฒนา และ การทดสอบ (development and test mode)"
@@ -942,6 +982,9 @@ th:
   street_address_2: "ที่อยู่เพิ่มเติม"
   subtotal: รวมทั้งหมด
   subtract: หักออก
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: ระบบ
   tax: ภาษี
   tax_categories: แบบการคิดภาษี
@@ -964,11 +1007,13 @@ th:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "ขอบคุณสำหรับการสั่งซื้อ ท่านสามารถพิมพ์รายการยืนยันเพื่อเก็บเป็นหลักฐานได้"
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "ภาษาไทย (TH)"
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Thumbnail"
   to_add_variants_you_must_first_define: "เพื่อเพิ่มความต่างในสินค้า ต้องเพิ่มรายการเพื่อเลือกก่อนเสมอ"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: รวม
   tracking: ติดตาม
@@ -1023,6 +1068,7 @@ th:
   width: ความกว้าง
   year: "ปี"
   you_have_been_logged_out: "คุณออกจากระบบแล้ว"
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "ตะกร้าสินค้าของคุณว่างเปล่า"
   zip: รหัสไปรษณีย์
   zone: เขต

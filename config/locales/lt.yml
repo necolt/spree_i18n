@@ -25,10 +25,10 @@ lt:
         address2: "Address (contd.)"
         city: City
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Phone
         state: "State"
         zipcode: "Zip Code"
@@ -68,6 +68,8 @@ lt:
         quantity: Quantity
       order: 
         checkout_complete: "Checkout Complete"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP Address"
         item_total: "Iš viso prekės"
         number: Number
@@ -92,6 +94,13 @@ lt:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Presentation
@@ -116,7 +125,7 @@ lt:
       taxonomy: 
         name: Name
       user: 
-        email: El. paštas
+        email: Email
       variant: 
         cost_price: "Cost Price"
         depth: Depth
@@ -315,8 +324,8 @@ lt:
   configured: Configured
   confirm: Patvirtinimas
   confirm_delete: "Confirm Deletion"
-  confirm_password: "Slaptažodžio pakartojimas"
-  continue: Tęsti
+  confirm_password: "Password Confirmation"
+  continue: Continue
   continue_shopping: "Tęsti apsipirkimą"
   copy_all_mails_to: Copy All Mails To
   cost_price: "Cost Price"
@@ -326,8 +335,8 @@ lt:
   country_based: "Country Based"
   coupon: Coupon
   coupon_code: Nuolaidos kodas
-  create: Sukurti
-  create_a_new_account: "Sukurti naują sąskaitą"
+  create: Create
+  create_a_new_account: "Create a new account"
   create_product_group_from_products: Create a new product group from these products
   create_user_account: Create User Account
   created_successfully: "Created Successfully"
@@ -349,6 +358,7 @@ lt:
   debit: Debit
   default: Default
   delete: Delete
+  delivery: Delivery
   depth: Depth
   description: Description
   destroy: Destroy
@@ -357,6 +367,7 @@ lt:
   discount_amount: "Discount Amount"
   display: Display
   edit: Edit
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: Editing Billing Integration
   editing_category: "Editing Category"
   editing_mail_method: Editing Mail Method
@@ -376,23 +387,32 @@ lt:
   editing_tracker: Editing Tracker
   editing_user: "Editing User"
   editing_zone: "Editing Zone"
-  email: El. paštas
-  email_address: "El. pašto adresas"
+  email: Email
+  email_address: "Email Address"
   email_server_settings_description: "Set email server settings."
   empty: "Tuščias"
   empty_cart: "Tuščias krepšelis"
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: error
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: Event
   existing_customer: "Existing Customer"
   expiration: "Expiration"
   expiration_month: "Expiration Month"
   expiration_year: "Expiration Year"
+  expiry: Expiry
   extension: Extension
   extensions: Extensions
   filename: Filename
@@ -407,11 +427,13 @@ lt:
   flat_rate_per_item: "Flat Rate (per item)"
   flat_rate_per_order: "Flat Rate (per order)"
   flexible_rate: "Flexible Rate"
-  forgot_password: "Pamiršote slaptažodį?"
+  forgot_password: "Forgot Password?"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Full Name"
   gateway: Gateway
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Gateway configuration"
   gateway_error: "Gateway Error"
   gateway_setting_description: "Select a payment gateway and configure its settings."
@@ -425,8 +447,8 @@ lt:
   google_analytics_id: "Analytics ID"
   google_analytics_new: "New Google Analytics Account"
   google_analytics_setting_description: "Manage Google Analytics ID"
-  guest_checkout: Apmokėjimas neprisijungus
-  guest_user_account: Apmokėti neprisijungus
+  guest_checkout: Guest Checkout
+  guest_user_account: Checkout as a Guest
   has_no_shipped_units: has no shipped units
   height: Height
   hello_user: "Hello User"
@@ -479,14 +501,14 @@ lt:
   live: "Live"
   loading: Loading
   locale_changed: "Locale Changed"
-  log_in: "Prisijungti"
+  log_in: "Log In"
   logged_in_as: "Logged in as"
-  logged_in_succesfully: "Prisijungėte sėkmingai"
-  logged_out: "Atsijungėte"
+  logged_in_succesfully: "Logged in successfully"
+  logged_out: "You have been logged out."
   login: Prisijungti
-  login_as_existing: "Prisijungti"
-  login_failed: "Prisijungti nepavyko"
-  login_name: Prisijungimo vardas
+  login_as_existing: "Log In as Existing Customer"
+  login_failed: "Login authentication failed."
+  login_name: Login
   logout: Atsijungti
   look_for_similar_items: Panašios prekės
   maestro_or_solo_cards: Maestro/Solo cards
@@ -498,6 +520,7 @@ lt:
   mark_shipped: "Mark Shipped"
   master_price: "Master Price"
   max_items: Max Items
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta Description"
   meta_keywords: "Meta Keywords"
   metadata: "Metadata"
@@ -512,7 +535,7 @@ lt:
   new_adjustment: "New Adjustment"
   new_billing_integration: New Billing Integration
   new_category: "New category"
-  new_customer: "Naujas klientas"
+  new_customer: "New Customer"
   new_image: "New Image"
   new_mail_method: New Mail Method
   new_option_type: "New Option Type"
@@ -546,7 +569,6 @@ lt:
   no_products_found: "No products found"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "No shipping methods available, please change your address and try again."
   no_user_found: "No user was found with that email address"
   none: None
   none_available: "None Available"
@@ -564,8 +586,9 @@ lt:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "On Hand"
   operation: Operation
-  option_Values: "Option Values"
+  option_type: "Option Type"
   option_types: "Option Types"
+  option_value: "Option Value"
   option_values: "Option Values"
   options: Options
   or: or
@@ -576,6 +599,11 @@ lt:
   order_date: "Order Date"
   order_details: "Order Details"
   order_email_resent: "Order Email Resent"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: That order number is not valid on this site.
   order_number: Order
   order_operation_authorize: Authorize
@@ -587,12 +615,12 @@ lt:
     adjustments: keičiamas
     awaiting_return: grąžinimo laukimas
     canceled: atšauktas
-    cart: krepšelis 
+    cart: krepšelis
     complete: įvykdymas
     confirm: patvirtinimas
     delivery: pristatymas
     payment: apmokėjimas
-    resumed : atnaujintas
+    resumed: resumed
     returned: gražintas
   order_summary: Užsakymo santrauka
   order_sure_want_to: "Are you sure you want to %{event} this order?"
@@ -610,7 +638,7 @@ lt:
   page_only_viewable_when_logged_out: You attempted to visit a page which can only be viewed when you are logged out
   paid: Paid
   parent_category: "Parent Category"
-  password: Slaptažodis
+  password: Password
   password_reset_instructions: "Password Reset Instructions"
   password_reset_instructions_are_mailed: "Instructions to reset your password have been emailed to you. Please check your email."
   password_reset_token_not_found: "We're sorry, but we could not locate your account. If you are having issues try copying and pasting the URL from your email into your browser or restarting the reset password process."
@@ -618,6 +646,7 @@ lt:
   path: Path
   pay: pay
   payment: Payment
+  payment_actions: "Actions"
   payment_gateway: "Payment Gateway"
   payment_information: "Apmokėjimo informacija"
   payment_method: Payment Method
@@ -627,8 +656,14 @@ lt:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Payments
   pending_payments: Pending Payments
@@ -657,7 +692,7 @@ lt:
   product_properties: "Product Properties"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -781,6 +816,7 @@ lt:
         sentence: with property <em>%s</em> and value <em>%s</em>
   products: Prekės
   products_with_zero_inventory_display: "Products with a zero inventory will %{not} be displayed"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ lt:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: Vnt.
+  quantity_returned: Quantity Returned
   quantity_shipped: Quantity Shipped
   range: "Range"
   rate: Rate
@@ -818,7 +855,7 @@ lt:
   register: Register as a New User
   register_or_guest: Checkout as Guest or Register
   registration: Registration
-  remember_me: "Prisiminti mane"
+  remember_me: "Remember me"
   remove: Remove
   reports: Reports
   required_for_solo_and_maestro: Required for Solo and Maestro cards.
@@ -844,11 +881,10 @@ lt:
   rma_number: RMA Number
   rma_value: RMA Value
   roles: Roles
+  rules: Rules
   sales_tax: "Sales Tax"
   sales_total: "Sales Total"
-  sales_total_for_all_orders: "Sales total for all orders"
-  sales_totals: "Sales Totals"
-  sales_totals_description: "Sales Total For All Orders"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: Išsaugoti ir tęsti
   save_preferences: Save Preferences
   scope: Scope
@@ -873,6 +909,9 @@ lt:
   ship_address: "Ship Address"
   shipment: Shipment
   shipment_details: Shipment Details
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Shipment "
   shipment_state: Shipment State
   shipment_states: 
@@ -925,6 +964,7 @@ lt:
   spree: 
     date: Date
     time: Time
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
@@ -942,6 +982,9 @@ lt:
   street_address_2: "Gatvė (kampas)"
   subtotal: Viso
   subtract: Subtract
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: System
   tax: Mokesčiai
   tax_categories: "Tax Categories"
@@ -964,11 +1007,13 @@ lt:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "English (US)"
   this_month: "This Month"
   this_year: "This Year"
   thumbnail: "Thumbnail"
   to_add_variants_you_must_first_define: "To add variants, you must first define"
+  to_state: "To State"
   top_grossing_products: "Top Grossing Products"
   total: Iš viso
   tracking: Tracking
@@ -1023,6 +1068,7 @@ lt:
   width: Width
   year: "Year"
   you_have_been_logged_out: "You have been logged out."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Jūsų krepšelis yra tuščias"
   zip: Pašto kodas
   zone: Zone

@@ -25,10 +25,10 @@ zh-CN:
         address2: "地址(继续)"
         city: "城市"
         country: "国家"
-        first_name: "名"
         first_name_begins_with: "名的开始"
-        last_name: "姓"
+        firstname: "First Name"
         last_name_begins_with: "姓的开始"
+        lastname: "Last Name"
         phone: "电话"
         state: "省份"
         zipcode: "邮政编码"
@@ -68,6 +68,8 @@ zh-CN:
         quantity: "数量"
       order: 
         checkout_complete: "已结账"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP地址"
         item_total: "产品小记"
         number: "数量"
@@ -92,6 +94,13 @@ zh-CN:
       product_scope: 
         arguments: "参数"
         description: "描述"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: "名称"
         presentation: "表示"
@@ -349,6 +358,7 @@ zh-CN:
   debit: "借方??"
   default: "默认"
   delete: "删除"
+  delivery: Delivery
   depth: "长"
   description: "描述"
   destroy: "删除"
@@ -357,6 +367,7 @@ zh-CN:
   discount_amount: "Discount Amount"
   display: "显示"
   edit: "编辑"
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: "编辑付款集成"
   editing_category: "编辑分类"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ zh-CN:
   enable_login_via_login_password: "使用标准的电子邮件/密码"
   enable_login_via_openid: "使用OpenID代替"
   enable_mail_delivery: "开启邮件发送"
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: "请严格按照卡面信息输入"
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "环境"
   error: "错误"
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: "事件"
   existing_customer: "现有顾客"
   expiration: "过期"
   expiration_month: "过期月份"
   expiration_year: "过期年份"
+  expiry: Expiry
   extension: "扩展"
   extensions: "扩展"
   filename: "文件名"
@@ -409,9 +429,11 @@ zh-CN:
   flexible_rate: "灵活费率"
   forgot_password: "忘记密码"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: "前端"
   full_name: "全名"
   gateway: "网关"
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "网关配置"
   gateway_error: "网关出错"
   gateway_setting_description: "选择一个支付网关并对其进行配置。"
@@ -498,6 +520,7 @@ zh-CN:
   mark_shipped: "标记为已配送"
   master_price: "默认价格"
   max_items: "最大商品项??"
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "元描述"
   meta_keywords: "关键字"
   metadata: "元数据"
@@ -546,7 +569,6 @@ zh-CN:
   no_products_found: "找不到产品"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "没有可用的配送方式，请变更你的地址，再次进行尝试"
   no_user_found: "找不到使用该电子邮件的用户帐号"
   none: "没有"
   none_available: "没有可用的"
@@ -564,8 +586,9 @@ zh-CN:
     variant_not_deleted: "具体型号不能被删除"
   on_hand: "库存"
   operation: "操作"
-  option_Values: "选项值"
+  option_type: "Option Type"
   option_types: "选项类型"
+  option_value: "Option Value"
   option_values: "选项值"
   options: "选项"
   or: "或"
@@ -576,6 +599,11 @@ zh-CN:
   order_date: "订单日期"
   order_details: "订单详情"
   order_email_resent: "重新发出了订单邮件"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: "这个订单号在系统中是不合法的"
   order_number: "订单号"
   order_operation_authorize: "认证"
@@ -592,7 +620,7 @@ zh-CN:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: "订单概述"
   order_sure_want_to: "您确定您想要%{event}这个订单么?"
@@ -618,6 +646,7 @@ zh-CN:
   path: "路径"
   pay: "支付"
   payment: "支付"
+  payment_actions: "Actions"
   payment_gateway: "支付网关"
   payment_information: "支付信息"
   payment_method: "支付方式"
@@ -627,8 +656,14 @@ zh-CN:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: "支付已更新"
   payments: "支付"
   pending_payments: "等待支付"
@@ -657,7 +692,7 @@ zh-CN:
   product_properties: "产品属性"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -781,6 +816,7 @@ zh-CN:
         sentence: "拥有属性 <em>%s</em> 及属性值 <em>%s</em>"
   products: "产品"
   products_with_zero_inventory_display: "没有库存的产品是%{not}会被显示的"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ zh-CN:
   provider: "提供者"
   provider_settings_warning: "如果您正在修改提供者类型，您需要在编辑提供者设置之前先保存。"
   qty: "数量"
+  quantity_returned: Quantity Returned
   quantity_shipped: "已发货数量"
   range: "范围"
   rate: "费率"
@@ -844,11 +881,10 @@ zh-CN:
   rma_number: "退货单号"
   rma_value: "退货价值"
   roles: "角色"
+  rules: Rules
   sales_tax: "消费税"
   sales_total: "销售总计"
-  sales_total_for_all_orders: "所有订单销售总计"
-  sales_totals: "销售总计"
-  sales_totals_description: "所有订单销售总计"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: "保存并继续"
   save_preferences: "保存首选项"
   scope: "范围"
@@ -873,6 +909,9 @@ zh-CN:
   ship_address: "配送地址"
   shipment: "配送"
   shipment_details: "配送详情"
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "运单号 #"
   shipment_state: Shipment State
   shipment_states: 
@@ -925,6 +964,7 @@ zh-CN:
   spree: 
     date: "日期"
     time: "时间"
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "如果需要的话，开发和测试环境将会使用SSL。"
   ssl_will_be_used_in_production_mode: "生产环境下将会使用SSL"
   ssl_will_not_be_used_in_development_and_test_modes: "如果需要的话，开发和测试环境将不会使用SSL。"
@@ -942,6 +982,9 @@ zh-CN:
   street_address_2: "地址(继续输入)"
   subtotal: "小计"
   subtract: "减去"
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: "系统"
   tax: "税"
   tax_categories: "缴税分类"
@@ -964,11 +1007,13 @@ zh-CN:
   test: "测试"
   test_mode: "测试模式"
   thank_you_for_your_order: "感谢您的订购，请打印这张订单作为购买凭证。"
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "中文(简体)"
   this_month: "当月"
   this_year: "当年"
   thumbnail: "缩略图"
   to_add_variants_you_must_first_define: "要添加具体型号，您需要先定义"
+  to_state: "To State"
   top_grossing_products: "毛利最高产品"
   total: "总计"
   tracking: "追踪"
@@ -1023,6 +1068,7 @@ zh-CN:
   width: "宽"
   year: "年"
   you_have_been_logged_out: "您已退出"
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "您的购物车是空的"
   zip: "邮编"
   zone: "区域"

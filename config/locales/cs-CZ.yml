@@ -25,10 +25,10 @@ cs-CZ:
         address2: "Adresa (pokračování)"
         city: "Město"
         country: "Country"
-        first_name: "First Name"
         first_name_begins_with: "First Name Begins With"
-        last_name: "Last Name"
+        firstname: "First Name"
         last_name_begins_with: "Last Name Begins With"
+        lastname: "Last Name"
         phone: Telefon
         state: "State"
         zipcode: "PSČ"
@@ -68,6 +68,8 @@ cs-CZ:
         quantity: "Množství"
       order: 
         checkout_complete: "Dokončit nákup"
+        completed_at: "Completed At"
+        coupon_code: "Coupon Code"
         ip_address: "IP adresa"
         item_total: "Celkem položek"
         number: "Číslo"
@@ -92,6 +94,13 @@ cs-CZ:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
+      promotion: 
+        code: "Code"
+        description: "Description"
+        expires_at: "Expires at"
+        name: "Name"
+        starts_at: "Starts at"
+        usage_limit: "Usage limit"
       property: 
         name: "Název"
         presentation: "Zobrazení"
@@ -232,7 +241,7 @@ cs-CZ:
   allow_backorders: "Povolit zpoždění dodávky"
   allow_ssl_to_be_used_when_in_developement_and_test_modes: "Povolit používání SSL v módech development a test"
   allow_ssl_to_be_used_when_in_production_mode: "Povolit používání SSL v módu production"
-  allowed_ssl_in_production_mode: "SSL v módu production {{not}}bude používáno"
+  allowed_ssl_in_production_mode: "SSL v módu production %{not}bude používáno"
   already_registered: "Jste už redistrováni?"
   alt_text: Alternative Text
   alternative_phone: "Další telefonní číslo"
@@ -269,7 +278,7 @@ cs-CZ:
   back_end: Back End
   back_to_store: "Zpět na obchod"
   backordered: "Zpožděná dodávka"
-  backordering_is_allowed: "Zpoždění dodávky {{not}}povoleno"
+  backordering_is_allowed: "Zpoždění dodávky %{not}povoleno"
   balance_due: "Nezaplacený zůstatek"
   best_selling_products: "Nejlépe prodávané výrobky"
   best_selling_taxons: "Nejlépe prodávané taxony"
@@ -321,7 +330,7 @@ cs-CZ:
   copy_all_mails_to: "Posílat kopie všech emailů na"
   cost_price: "Náklady"
   count: "Počet"
-  count_of_reduced_by: "Počet '{{name}}' snížen o {{count}}"
+  count_of_reduced_by: "Počet '%{name}' snížen o %{count}"
   country: "Stát"
   country_based: "Založeno na zemi"
   coupon: Coupon
@@ -349,6 +358,7 @@ cs-CZ:
   debit: Dluh
   default: Default
   delete: Vymazat
+  delivery: Delivery
   depth: Hloubka
   description: Popis
   destroy: Vymazat
@@ -357,6 +367,7 @@ cs-CZ:
   discount_amount: "Discount Amount"
   display: Zobrazit
   edit: Upravit
+  edit_general_settings: "Edit General Settings"
   editing_billing_integration: "Úprava začlenění fakturace"
   editing_category: "Úprava kategorie"
   editing_mail_method: Editing Mail Method
@@ -384,15 +395,24 @@ cs-CZ:
   enable_login_via_login_password: "Použít přihlášení emailem a heslem"
   enable_login_via_openid: "Použít přihlášení s OpenID"
   enable_mail_delivery: "Povolit doručování emailů"
+  enter_atleast_five_letters: Enter atleast five letters of customer name
   enter_exactly_as_shown_on_card: "Zadejte prosím přesně tak, jak je napsáno na kartě"
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: Chyba
+  errors: 
+    messages: 
+      could_not_create_taxon: "Could not create taxon"
+      no_shipping_methods_available: "No shipping methods available for selected location, please change your address and try again."
+  errors_prohibited_this_record_from_being_saved: 
+    one: "1 error prohibited this record from being saved"
+    other: "%{count} errors prohibited this record from being saved"
   event: "Událost"
   existing_customer: "Stávající zákazník"
   expiration: "Expirace"
   expiration_month: "Měsíc expirace"
   expiration_year: "Rok expirace"
+  expiry: Expiry
   extension: "Rozměr"
   extensions: "Rozměry"
   filename: "Název souboru"
@@ -409,9 +429,11 @@ cs-CZ:
   flexible_rate: "Pružná sazba"
   forgot_password: "Zapomenuté heslo"
   free_shipping: Free Shipping
+  from_state: From State
   front_end: Front End
   full_name: "Celé jméno"
   gateway: "Platební brána"
+  gateway_config_unavailable: "Gateway unavailable for environment"
   gateway_configuration: "Nastavení platební brány"
   gateway_error: "Chyba platební brány"
   gateway_setting_description: "Vybrat a nastavit platební bránu"
@@ -498,6 +520,7 @@ cs-CZ:
   mark_shipped: "Označit jako odeslané"
   master_price: "Základní cena"
   max_items: "Maximum položek"
+  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Popis (meta)"
   meta_keywords: "Klíčová slova (meta)"
   metadata: "Metadata"
@@ -546,7 +569,6 @@ cs-CZ:
   no_products_found: "Nebyly nalezeny žádné výrobky"
   no_results: "No results"
   no_rules_added: No rules added
-  no_shipping_methods_available: "Nebyly nalezeny žádné možnosti dopravy, změňte prosím adresu a zkuste to znova."
   no_user_found: "Nebyl nalezen žádný uživatel s touto emailovou adresou"
   none: "Žádný"
   none_available: "Žádný dostupný"
@@ -564,8 +586,9 @@ cs-CZ:
     variant_not_deleted: "Variant could not be deleted"
   on_hand: "Dostupný"
   operation: Operace
-  option_Values: "Hodnoty volby"
+  option_type: "Option Type"
   option_types: "Typy volby"
+  option_value: "Option Value"
   option_values: "Hodnoty volby"
   options: "Volby"
   or: nebo
@@ -576,6 +599,11 @@ cs-CZ:
   order_date: "Datum objednání"
   order_details: "Detail objednávky"
   order_email_resent: "Potvrzení objednávky znovu zasláno"
+  order_mailer: 
+    cancel_email: 
+      subject: "Cancellation of Order"
+    confirm_email: 
+      subject: "Order Confirmation"
   order_not_in_system: "Toto číslo objednávky v systému není"
   order_number: "Číslo objednávky"
   order_operation_authorize: "Autorizovat"
@@ -592,10 +620,10 @@ cs-CZ:
     confirm: confirm
     delivery: delivery
     payment: payment
-    resumed : resumed
+    resumed: resumed
     returned: returned
   order_summary: "Shrnutí objednávky"
-  order_sure_want_to: "Jste si jisti, že chcete {{event}} tuto objednávku?"
+  order_sure_want_to: "Jste si jisti, že chcete %{event} tuto objednávku?"
   order_total: "Celková cena objednávky"
   order_total_message: "Celková suma, která bude odečtena z Vaší karty"
   order_updated: "Objednávka byla aktualizována"
@@ -618,6 +646,7 @@ cs-CZ:
   path: "Cesta"
   pay: platit
   payment: Platba
+  payment_actions: "Actions"
   payment_gateway: "Platební brána"
   payment_information: "Informace o platbě"
   payment_method: Payment Method
@@ -627,8 +656,14 @@ cs-CZ:
   payment_state: Payment State
   payment_states: 
     balance_due: balance due
+    checkout: checkout
+    completed: completed
     credit_owed: credit owed
+    failed: failed
     paid: paid
+    pending: pending
+    processing: processing
+    void: void
   payment_updated: Payment Updated
   payments: Platby
   pending_payments: Pending Payments
@@ -642,7 +677,7 @@ cs-CZ:
   previous: "Předchozí"
   price: Cena
   price_bucket: Price Bucket
-  price_with_vat_included: "{{price}} (s DPH)"
+  price_with_vat_included: "%{price} (s DPH)"
   problem_authorizing_card: "Problém s autorizací kreditní karty"
   problem_capturing_card: "Problém při strhávání částky z kreditní karty"
   problems_processing_order: "Došlo k problému při zpracování Vaší objednávky"
@@ -657,7 +692,7 @@ cs-CZ:
   product_properties: "Vlastnosti výrobku"
   product_rule: 
     choose_products: Choose products
-    label: "Order must contain {{select}} of these products"
+    label: "Order must contain %{select} of these products"
     match_all: all
     match_any: at least one
     product_source: 
@@ -780,7 +815,8 @@ cs-CZ:
         name: "S vlastností a hodnotou"
         sentence: "s vlastností <em>%s</em> a hodnotou <em>%s</em>"
   products: "Výrobky"
-  products_with_zero_inventory_display: "Výrobky, které nejsou na skladě, {{not}}budou zobrazeny"
+  products_with_zero_inventory_display: "Výrobky, které nejsou na skladě, %{not}budou zobrazeny"
+  promotion: Promotion
   promotion_form: 
     match_policies: 
       all: Match any of these rules
@@ -807,6 +843,7 @@ cs-CZ:
   provider: "Provider"
   provider_settings_warning: "If you are changing the provider type, you must save first before you can edit the provider settings"
   qty: "Množství"
+  quantity_returned: Quantity Returned
   quantity_shipped: "Odeslané množství"
   range: Rozsah
   rate: Sazba
@@ -844,17 +881,16 @@ cs-CZ:
   rma_number: "Číslo položky pro vrácení zboží (RMA)"
   rma_value: "Hodnota položky pro vrácení zboží (RMA)"
   roles: Role
+  rules: Rules
   sales_tax: "Daň z prodeje"
   sales_total: "Prodej celkem"
-  sales_total_for_all_orders: "Prodej celkem pro všechny objednávky"
-  sales_totals: "Prodej celkem"
-  sales_totals_description: "Prodej celkem pro všechny objednávky"
+  sales_total_description: "Sales Total For All Orders"
   save_and_continue: "Uložit a pokračovat"
   save_preferences: "Uložit nastavení"
   scope: Scope
   scopes: Scopes
   search: Hledat
-  search_results: "Výsledky vyhledávání pro '{{keywords}}'"
+  search_results: "Výsledky vyhledávání pro '%{keywords}'"
   searching: Searching
   secure_connection_type: "Typ bezpečného připojení"
   secure_creditcard: "Bezpečná kreditní karta"
@@ -873,6 +909,9 @@ cs-CZ:
   ship_address: "Doručovací adresa"
   shipment: "Doprava"
   shipment_details: "Podrobnosti dopravy"
+  shipment_mailer: 
+    shipped_email: 
+      subject: "Shipment Notification"
   shipment_number: "Číslo balíku (dopravy)"
   shipment_state: Shipment State
   shipment_states: 
@@ -896,7 +935,7 @@ cs-CZ:
   shipping_methods: "Způsoby dopravy"
   shipping_methods_description: "Spravovat způsoby dopravy"
   shipping_total: "Náklady na dopravu celkem"
-  shop_by_taxonomy: "Nakupovat podle {{taxonomy}}"
+  shop_by_taxonomy: "Nakupovat podle %{taxonomy}"
   shopping_cart: "Nákupní košík"
   show: "Ukázat"
   show_active: "Show Active"
@@ -905,7 +944,7 @@ cs-CZ:
   show_only_complete_orders: "Zobrazit pouze dokončené objednávky"
   show_out_of_stock_products: "Zobrazit zboží, které není skladem"
   show_price_inc_vat: "Zobrazit ceny včetně DPH"
-  showing_first_n: "Showing first {{n}}"
+  showing_first_n: "Showing first %{n}"
   sign_up: "Přihlásit se"
   site_name: "Název stránky"
   site_url: "Adresa stránky (URL)"
@@ -925,6 +964,7 @@ cs-CZ:
   spree: 
     date: Datum
     time: "Čas"
+  spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
   ssl_will_be_used_in_development_and_test_modes: "SSL bude použito v 'development' a 'test' módu, bude-li třeba."
   ssl_will_be_used_in_production_mode: "SSL bude použito v 'production' módu."
   ssl_will_not_be_used_in_development_and_test_modes: "SSL nebude použito v 'development' a 'test' módu."
@@ -942,6 +982,9 @@ cs-CZ:
   street_address_2: "Ulice (pokračování)"
   subtotal: "Mezisoučet"
   subtract: "Odečet"
+  successfully_created: "%{resource} has been successfully created!"
+  successfully_removed: "%{resource} has been successfully removed!"
+  successfully_updated: "%{resource} has been successfully updated!"
   system: "Systém"
   tax: "Daň"
   tax_categories: "Daňové kategorie"
@@ -964,11 +1007,13 @@ cs-CZ:
   test: "Test"
   test_mode: Test Mode
   thank_you_for_your_order: "Děkujeme za Váš nákup. Doporučujeme Vám vytisknout si kopii této stránky."
+  there_were_problems_with_the_following_fields: "There were problems with the following fields"
   this_file_language: "Čeština (CS)"
   this_month: "Tento měsíc"
   this_year: "Tento rok"
   thumbnail: "Náhled obrázku"
   to_add_variants_you_must_first_define: "Pro přidání variant musíte nejprve definovat"
+  to_state: "To State"
   top_grossing_products: "Výrobky s největším podílem na obratu"
   total: Celkem
   tracking: "Sledování"
@@ -1023,6 +1068,7 @@ cs-CZ:
   width: "Šířka"
   year: Rok
   you_have_been_logged_out: "Byli jste odhlášeni."
+  you_have_no_orders_yet: "You have no orders yet."
   your_cart_is_empty: "Váš nákupní košík je prázdný"
   zip: "PSČ"
   zone: "Zóna"
